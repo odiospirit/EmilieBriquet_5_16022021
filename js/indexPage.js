@@ -25,10 +25,9 @@ function displayTeddiesInformation(teddies) {
 
     let productList = document.createElement("ul");
     productList.classList.add("product-list");
-
-    product.append(productList);
+    product.append(productList);// create in section part, ul element HTML with class product-list
     
-    console.log(productList);// create in section part, ul element HTML with class product-list
+    console.log(productList);
 
     for (let teddy of teddies){
         let productListItem = document.createElement("li");
@@ -46,19 +45,37 @@ function displayTeddiesInformation(teddies) {
         productListItemDescription.classList.add("product-list__item__description");
         productListItem.append(productListItemDescription);// create in li element HTML, div element HTML with class product-list__item__description
 
-        let descriptionNode = `
+        let descriptionElements = `
             <p class="product-list__item__description__paragraphe">Mon nom est ${teddy.name}</p>
-            <span class="product-list__item__description__span">Prix de vente : ${teddy.price/100} €</span>
-            <button class="product-list__item__description__button">Voir le produit</button>`;// add HTML like <p>, <span> and <button> element in div element HTML to build this part with datas from API teddies (name, price)
+            <span class="product-list__item__description__span" data-name="${teddy.name}">Prix de vente : ${teddy.price/100} €</span>
+            <button class="product-list__item__description__button" data-id="${teddy._id}">Voir le produit</button>`;// add HTML like <p>, <span> and <button> element in div element HTML to build this part with datas from API teddies (name, price) - add an attribut data-id on element button HTML
 
-        productListItemDescription.innerHTML = descriptionNode;
-
+        productListItemDescription.innerHTML = descriptionElements;// add elements HTML in div element HTML
     }
+
+    const buttons = document.querySelectorAll('.product-list__item__description__button');// select all node with class product-list__item__description__button in document
+
+    for (var i = 0; i < buttons.length; i++) {
+        var button = buttons[i];// for each loop, integrate in variable button, the actual element
+
+        console.log(button);
+
+        button.addEventListener('click', function(event) {
+        console.log(event);// add an event listener on variable button and on event click
+
+            const id = event.target.getAttribute("data-id")// integrate on variable id, attribute with parameter data-id of actual element
+            console.log(id);
+
+            console.log("/product.html?id=" + id);
+
+            window.location = "file:///Users/emilie/Desktop/projet5/orinoco/product.html?id=" + id;// modify url on page with url + id wich is in variable id
+        })
+    }
+
 };
 
-// call function fillIndexPage
 
-fillIndexPage();
+fillIndexPage();// call function fillIndexPage
     
 
 

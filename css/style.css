@@ -160,7 +160,7 @@ body {
 
 .details {
   width: 80%;
-  height: 800px;
+  height: 900px;
   margin: auto;
   padding-top: 50px;
   background-color: beige;
@@ -170,17 +170,17 @@ body {
   color: brown;
   text-align: center;
 }
-.details-product {
+.details-teddy {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.details-product img {
+.details-teddy img {
   width: 600px;
   padding-top: 20px;
 }
-.details-product__list {
+.details-teddy__list {
   list-style: none;
   text-align: center;
   line-height: 40px;
@@ -189,24 +189,33 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 50px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
-.details-product__list #name_product {
+.details-teddy__list #name_teddy {
   font-size: 50px;
   color: burlywood;
 }
-.details-product__list #description_product {
+.details-teddy__list #description_teddy {
   width: 90%;
-  margin-top: 30px;
+  margin-top: 50px;
   line-height: 20px;
 }
-.details-product__list #color_option {
-  margin-top: 30px;
+.details-teddy__list #color_teddy {
+  margin-top: 50px;
   font-size: 20px;
 }
-.details-product__list #price_product {
+.details-teddy__list #color_option {
+  width: 150px;
+  color: burlywood;
+  text-align-last: center;
+  background-color: beige;
+  font-size: 18px;
+  border: solid 2px transparent;
+}
+.details-teddy__list #price_teddy {
   width: 200px;
-  margin-top: 35px;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  margin-top: 50px;
   border: solid 2px #993b19;
 }
 
