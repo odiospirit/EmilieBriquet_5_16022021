@@ -1,0 +1,153 @@
+@import "../base/general";
+
+.cart
+{
+    width: 80%;
+    margin: auto;
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    &-items
+    {
+        width: 90%;
+        margin-top: 20px;
+        border: 3px solid burlywood;
+
+        &__title
+        {
+            width: 300px;
+            margin-top: 30px;
+            color: brown;
+            text-decoration: underline;
+        }
+
+
+        &__list
+        {
+            width: 90%;
+            height: 100%;
+            padding-bottom: 10px;
+            margin: 40px auto;
+            display: flex;
+            list-style-type: none;
+            justify-content: space-around;
+            border-bottom: dashed 1px black;
+
+            #description
+            {
+                line-height: 20px;
+                width: 50%;
+            }
+
+            &__li
+            {
+                width: 30%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                &__entitled
+                {
+                    width: 100%;
+                    height: 50px;
+                    margin: 0;
+                    color: brown;
+                    text-decoration: underline;
+                }
+
+                img 
+                {
+                    width: 100px;
+                }
+
+                .name
+                {
+                    width: 100%;
+                    font-size: 18px;
+                    font-weight: bolder;
+                    color: black;
+                }
+
+                .description
+                {
+                    width: 100%;
+                    margin-top: 20px;
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+
+                
+
+                #quantity_option 
+                {
+                    width: 50px;
+                    color:black;
+                    text-align-last: center;
+                    background-color: beige;
+                    font-size: 15px;
+                    border: solid 2px transparent;
+                }
+
+            }
+
+            #delete
+            {
+                display: flex;
+                align-items: center;
+                color: brown;
+                font-weight: bolder;
+            }
+
+        } 
+
+    }
+
+
+    &-total
+    {
+        width: 40%;
+        margin: 40px 0px;
+        border: 3px solid burlywood;
+        background-color: beige;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__list
+        {
+            height: 100%;
+            padding: 0;
+            margin: 20px 0px;
+            list-style-type: none;
+            text-align: center;
+            line-height: 50px;
+
+            #total
+            {
+                color: brown;
+                font-weight: bolder;
+                font-size: 18px;
+            }
+
+        }
+
+    }
+
+    &-validation
+    {
+        width: 400px;
+        height: 40px;
+        text-align-last: center;
+        background-color: burlywood;
+        color: beige;
+        font-size: 18px;
+        border: none;
+        font-weight: bolder;
+        border-radius: 10%;
+        margin-bottom: 30px;
+    }
+
+}

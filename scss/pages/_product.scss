@@ -1,71 +1,9 @@
-body
-{
-    width: 100%;
-    margin: 0;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-
-.header
-{
-    height: 300px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: burlywood;
-
-    &-logo
-    {
-        width: 70%;
-        margin-left: 20px;
-
-        &__img
-        {
-            padding-left: 30px;
-        }
-
-        &__title
-        {
-            margin: 0;
-            padding-left: 50px;
-            font-size: 30px;
-        }
-    }
-
-    &-nav
-    {
-        width: 30%;
-        font-size: 30px;
-    
-        &__list
-        {
-            display: flex;
-            list-style: none;
-    
-            &__item
-            {
-                width: 50%;
-                
-                a
-                {
-                    text-decoration: none;
-                    color: black;
-    
-                    &:hover
-                    {
-                        color: brown;
-                    }
-                }
-            }
-        }
-    }
-}
+@import "../base/general";
 
 .details
 {
     width: 80%;
-    height: 900px;
+    height: 1000px;
     margin: auto;
     padding-top: 50px;
     background-color: beige;
@@ -130,7 +68,21 @@ body
                 background-color: beige;
                 font-size: 18px;
                 border: solid 2px transparent;
-                
+            }
+
+            #name_quantity
+            {
+                margin-left: 40px;
+            }
+
+            #quantity_option
+            {
+                width: 50px;
+                color:burlywood;
+                text-align-last: center;
+                background-color: beige;
+                font-size: 18px;
+                border: solid 2px transparent;
             }
 
             #price_teddy
@@ -139,33 +91,22 @@ body
                 margin-top: 50px;
                 border: solid 2px rgb(153, 59, 25);
             }
-        }
-    }
-}
 
-.footer
-{
-    height: 100px;
-    background-color: burlywood;
-    display: flex;
-
-    &-list 
-    {
-        width: 90%;
-        display: flex;
-        align-items: center;
-
-        &__item
-        {
-            width: 50%;
-            text-align: center;
-            list-style: none;
-
-            a
+            button 
             {
-                text-decoration: none;
-                color: black;
+                width: 200px;
+                height: 30px;
+                margin-top: 50px;
+                color:rgb(153, 59, 25);
+                font-size: 18px;
+                border: none;
+                background-color: burlywood;
+                text-align-last: center;
+                border-radius: 10%;
             }
+        
         }
+
     }
+
 }

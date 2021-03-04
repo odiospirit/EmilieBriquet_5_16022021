@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./fontawesome/css/all.min.css">
     <link rel="text" href="./fontawesome/webfonts">
-    <title>Vente en ligne d'ours en peluche fait maison - ORINOURS</title>
+    <title>Récapitulatif du panier</title>
 </head>
 <body>
 
@@ -34,11 +34,30 @@
 
     </header>
 
-    <section class="product">
+    <section class="cart">
 
-        <h1 class="product-title">Nous vous proposons ces magnifiques ours en peluches fait maison :</h1>
+        <div class="cart-items">
+
+            <h1 class="cart-items__title">RECAPITULATIF</h1>
+
+        </div>
+
+        <div class="cart-total">
+
+            <ul class="cart-total__list">
+
+                <li id="ttc">TOTAL TTC : 10,00€</li>
+                <li id="fdp">Frais de Port : 0,00 €</li>
+                <li id="total">Total de la commande: 10,00 €</li>
+
+            </ul>
+        
+        </div>
+
+        <button class="cart-validation">Valider votre commande</button>
 
     </section>
+
 
     <footer class="footer">
 
@@ -52,7 +71,7 @@
 
     </footer>
 
-    <script type="text/javascript" src="./js/indexPage.js"></script>
+    <script type="text/javascript" src="./js/cartPage.js"></script>
     
 </body>
 </html>

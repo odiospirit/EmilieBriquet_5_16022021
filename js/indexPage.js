@@ -1,10 +1,33 @@
+// on loading page - display number of items on cart
+
+
+document.addEventListener('DOMContentLoaded', function() {
+
+    let linkCart = document.querySelector(".link");
+        console.log(linkCart);
+        localStorage.length;
+
+    let iconCart = linkCart.querySelector('.articles');
+
+    let articleInfosStorage = JSON.parse(localStorage.getItem("articleInfosStorage")).length;
+
+        console.log(iconCart);
+        iconCart.textContent = articleInfosStorage;
+        console.log(iconCart);
+        console.log(articleInfosStorage);
+  });
+
+
+
+
+
 // How to fill my index page with informations of API teddies
 
 // the function fillIndexPage allows to make a request to an API for get to teddies datas
 
 async function fillIndexPage() {
 
-    await fetch("https://oc-p5-api.herokuapp.com/api/teddies") // make a request to API and get informations of API in json
+    await fetch("http://127.0.0.1:3000/api/teddies") // make a request to API and get informations of API in json
         .then((response) => response.json())// when response of API arrive, this response is integrate on a variable response and then to this variable, it passed a function .json () to decode response in json
 
 
@@ -68,11 +91,12 @@ function displayTeddiesInformation(teddies) {
 
             console.log("/product.html?id=" + id);
 
-            window.location = "file:///Users/emilie/Desktop/projet5/orinoco/product.html?id=" + id;// modify url on page with url + id wich is in variable id
+            window.location = "/orinoco/product.html?id=" + id;// modify url on page with url + id wich is in variable id
         })
     }
 
 };
+
 
 
 fillIndexPage();// call function fillIndexPage
